@@ -1,6 +1,6 @@
 # T5 config
 model_name: "google-t5/t5-small"
-dataset_name: "achrafothman/aslg_pc12"
+dataset_name: "cleaned_data/cleaned_aslg_pc12.csv"
 
 max_input_length:  128
 max_target_length: 128
