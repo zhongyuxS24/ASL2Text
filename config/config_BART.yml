@@ -1,0 +1,23 @@
+#BART config
+model_name: "facebook/bart-base"
+dataset_name: "cleaned_data/cleaned_aslg_pc12.csv"
+
+max_source_length: 128
+max_target_length: 128
+
+logging_steps: 10
+
+num_train_epochs: 5
+do_train: True
+do_eval: True
+per_device_train_batch_size: 16
+per_device_eval_batch_size:  16
+warmup_steps: 500
+weight_decay: 0.1
+label_smoothing_factor: 0.1
+predict_with_generate: True
+save_strategy: "epoch"
+evaluation_strategy: "epoch" 
+save_total_limit: 1
+greater_is_better: False
+metric_for_best_model: "eval_loss"
