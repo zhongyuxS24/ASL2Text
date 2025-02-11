@@ -176,6 +176,7 @@ def compute_metrics(preds, labels, tokenizer):
 
     if isinstance(preds, tuple):
         preds = preds[0]
+    preds = np.clip(preds, 0, tokenizer.vocab_size - 1)
     decoded_preds = tokenizer.batch_decode(preds, skip_special_tokens=True)
     # Replace -100 in the labels as we can't decode them.
     labels = np.where(labels != -100, labels, tokenizer.pad_token_id)
