@@ -1,6 +1,6 @@
 #BART config
 model_name: "facebook/bart-base"
-dataset_name: "cleaned_data/cleaned_aslg_pc12.csv"
+dataset_name: "/data/stmc-transformer-data/en_gpt_aslg_pc12.csv"
 
 max_source_length: 128
 max_target_length: 128
